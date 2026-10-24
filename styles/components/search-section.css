@@ -1,0 +1,65 @@
+@import url("../styles.config.css");
+
+.section-container {
+  padding: 1.2rem 1rem;
+}
+
+h1 {
+  font-family: var(--font-family-secundary);
+  font-size: 3rem;
+  font-weight: var(--weight-600);
+  text-align: center;
+}
+
+.search {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  background-color: var(--Neutral-800);
+  padding: 0.6rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.2s; /* Suaviza el cambio */
+}
+
+/* El borde se ilumina cuando el input tiene focus */
+.search:focus-within {
+  border-color: var(--Neutral-00);
+}
+
+.searchInput {
+  width: 100%;
+  background: none;
+  border: 0;
+  outline: none;
+  color: var(--Neutral-00);
+}
+
+.searchInput::placeholder {
+  color: var(--Neutral-300);
+}
+
+.btnSearch {
+  background-color: var(--Blue-500);
+  border: 2px solid var(--Neutral-900);
+  color: var(--Neutral-200);
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.btnSearch:hover {
+  background-color: var(--Blue-700);
+}
+
+.btnSearch:focus {
+  border-color: var(--Blue-500);
+  outline: none;
+}
+
+.search {
+  width: 100%;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/styles.config.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="./styles/components/left-section.css">
+  <link rel="stylesheet" href="./styles/components/search-section.css">
+  <link rel="stylesheet" href="./styles/components/right-section.css">
+  <title>Weather app</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header-container">
+    <img src="./assets/images/logo.svg" alt="logo" class="logo-img">
+    <div class="dropdown">
+      <button class="dropdown-toogle">
+        <img src="./assets/images/icon-units.svg" alt="">
+        Units
+        <img src="./assets/images/icon-dropdown.svg" alt="">
+      </button>
+      <div class="dropdown-menu">
+        <button>Switch to imperial</button>
+        <div class="menu-section">
+          <span class="menu-label">Temperature</span>
+          <button>
+            <span>Celsius (°C)</span>
+            <span class="check"><img src="./assets/images/icon-checkmark.svg" alt=""></span>
+          </button>
+          <button><span>Fahrenheit (°F)</span></button>
+        </div>
+        <hr class="menu-divider">
+        <div class="menu-section">
+          <span class="menu-label">Wind Speed</span>
+          <button>
+            <span>km/h</span>
+            <span class="check"><img src="./assets/images/icon-checkmark.svg" alt=""></span>
+          </button>
+          <button><span>mph</span></button>
+        </div>
+        <hr class="menu-divider">
+        <div class="menu-section">
+          <span class="menu-label">Precipitation</span>
+          <button>
+            <span>Millimeters (mm)</span>
+            <span class="check"><img src="./assets/images/icon-checkmark.svg" alt=""></span>
+          </button>
+          <button><span>Inches (in)</span></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Buscador search -->
+  <section class="section-container">
+    <h1>How's the sky looking today?</h1>
+    <div class="container-search-btnSearch">
+      <div id="search" class="search">
+        <img src="./assets/images/icon-search.svg" alt="search">
+        <input type="text" id="searchValue" class="searchInput" placeholder="Search for a place...">
+      </div>
+      <button id="btnSearch" class="btnSearch">Search</button>
+    </div>
+  </section>
+
+  <!-- Contenido principal -->
+  <main id="container-main">
+
+    <!-- 1. El clima  -->
+    <div id="contenido-clima">
+      <section class="card-principal">
+        <div id="card-ciudad">
+          <div id="ciudadActual">
+            <h3 id="nombre-ciudad"></h3>
+            <p id="fecha"></p>
+          </div>
+          <div id="temperature-ciudad">
+            <img alt="icon" id="icon">
+            <span id="temperature"></span>
+          </div>
+        </div>
+        <div class="detalles" id="contenedor-detalles"></div>
+        <template id="molde-detalle">
+          <div class="card-detalles">
+            <span class="detalles-label"></span>
+            <span class="detalles-value"></span>
+          </div>
+        </template>
+        <div class="container-daily">
+          <h3>Daily forecast</h3>
+          <div id="pronostico-dias" class="daily-grid"></div>
+        </div>
+      </section>
+
+      <section class="hourly-section">
+        <h3>Hourly forecast</h3>
+        <div id="pronostico-horas" class="lista-horas"></div>
+      </section>
+    </div>
+
+    <!-- mensaje de error -->
+    <div id="estado-error" class="mensaje-error" style="display: none;">
+      <img src="./assets/images/icon-error.svg" alt="Error">
+      <h3>No search result found!</h3>
+    </div>
+
+  </main>
+
+  <script type="module" src="./script/main.js"></script>
+</body>
+
+</html>

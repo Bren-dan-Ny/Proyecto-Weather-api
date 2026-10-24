@@ -1,0 +1,50 @@
+@import url("../styles.config.css");
+.hourly-section {
+  background-color: var(--Neutral-800);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.hourly-section h3 {
+  margin-bottom: var(--spacied-mobile);
+  font-size: var(--paragraph);
+  font-weight: var(--weight-500);
+}
+.hourly-content {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.hourly-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid var(--Neutral-600);
+  background-color: var(--Neutral-700);
+  border-radius: 1rem;
+  padding-right: var(--spacied-mobile);
+}
+.hourly-temp {
+  align-self: center;
+  color: var(--Neutral-300);
+}
+.hourly-icon {
+  height: 35px;
+}
+.hourly-time,
+.hourly-temp {
+  font-size: 1rem;
+}
+@media (min-width: 1024px) {
+  .hourly-item {
+    padding: 0.6rem 0.4rem;
+  }
+  .hourly-icon {
+    height: 35px;
+  }
+  .hourly-item .hourly-temp,
+  .hourly-time {
+    font-size: 1rem;
+  }
+}
